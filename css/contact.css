@@ -1,0 +1,104 @@
+*{
+  box-sizing: border-box;
+}
+.contact-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+    background-color: var(--color-bg2);
+    border-radius: 2rem;
+    padding: 4rem;
+    height: 32rem;
+    margin: 7rem auto;
+}
+aside{
+  background-color: var(--color-primary);
+  position: relative;
+  bottom: 10rem;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+.contact-container aside .contact-img,h2,.contact-container li,.contact-container p{
+  margin-bottom: 2rem;
+}
+aside ul li h5{
+  display: inline;
+}
+.contact-container aside li span{
+  margin-right: 0.5rem;
+}
+.contact-container aside .social-icons{
+  display: flex;
+  gap: 1rem;
+}
+.contact-container aside .social-icons .social-icon{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 3rem;
+width: 3rem;
+border-radius: 50%;
+background-color: var(--color-bg1);
+
+}
+.contact-container form input,textarea{
+color: var(--color-light);
+background-color: var(--color-bg);
+border: none;
+
+}
+.contact-container form{
+  display: flex;
+  gap: 1%;
+  flex-wrap: wrap;
+  height: fit-content;
+
+}
+.contact-container form input:nth-child(1),.contact-container form input:nth-child(2){
+  padding: 1rem;
+   width: 49%; 
+  margin-bottom: 1rem;
+} 
+.contact-container form input:nth-child(3),textarea{
+   width: 99%; 
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-container ::placeholder {
+  color: white;
+}
+.contact-container form input:focus,textarea:focus
+{
+  outline: none;
+}
+
+/* ============================================   media querry   ============================================ */
+
+@media screen and (max-width:991px) {
+  .contact-container{
+    grid-template-columns: 1fr;
+    gap: 0;
+    height: fit-content;
+    padding:  2rem;
+  }
+  aside{
+    position: static;
+    border-radius: 2rem;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .contact-container aside .social-icons{
+    justify-content: center;
+
+  }
+  .contact-container form input:nth-child(1),.contact-container form input:nth-child(2){
+    padding: 1rem;
+     width: 100%; 
+    margin-bottom: 1rem;
+  } 
+  .contact-container button{
+    margin: auto;
+  }
+}

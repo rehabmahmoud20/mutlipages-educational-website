@@ -1,0 +1,143 @@
+/* ============================================   start achivments   ============================================ */
+
+.achivments-container {
+  display: grid;
+  grid-template-columns: 40% 50%;
+  gap: 5rem;
+}
+.achivments-left h2,
+.achivments-container p {
+  margin-bottom: 2rem;
+}
+.achive-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.achive-numbers .achive-card .icon {
+  height: 3rem;
+  width: 3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+}
+
+.achive-card {
+  background-color: var(--color-bg1);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
+  transition: var(--transition);
+}
+.achive-card:hover {
+  background-color: var(--color-bg2);
+  box-shadow: 0 3rem 3rem rgb(0 0 0 0.3);
+}
+.achive-card .icon {
+  margin: auto;
+  margin-bottom: 0.5rem;
+}
+.achive-numbers .achive-card:first-of-type .icon {
+  background-color: var(--color-danger);
+}
+.achive-numbers .achive-card:nth-child(2) .icon {
+  background-color: var(--color-success);
+}
+.achive-numbers .achive-card:last-of-type .icon {
+  background-color: var(--color-bg2);
+}
+/* ============================================   end achivments   ============================================ */
+
+/* ============================================   start team   ============================================ */
+.team {
+  background-color: var(--color-bg1);
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.team h2 {
+  margin-bottom: 2rem;
+}
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.person {
+  background-color: var(--color-bg2);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.person:hover {
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
+.team-social-icons {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  transform: translateY(-50%);
+  background-color: var(--color-primary);
+  border-radius: 1rem 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 2;
+
+  transition: var(--transition);
+}
+.person .team-img img {
+  border-radius: 1rem;
+  margin-bottom: 0.8rem;
+  filter: saturate(0);
+}
+.person .team-img img:hover {
+  filter: saturate(1);
+}
+.person:hover .team-social-icons {
+  right: 0;
+}
+.person h5 {
+  margin-bottom: 0.5rem;
+}
+.person p {
+  margin-bottom: 0;
+}
+
+/* ============================================   end team   ============================================ */
+
+/* ============================================   media query   ============================================ */
+/* achivments */
+
+@media screen and (max-width: 991px) {
+  .achivments-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .achivments-right {
+    width: 80%;
+    margin: auto;
+  }
+  /* team */
+  .team-container {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 2rem;
+  }
+  
+}
+@media screen and ( min-width:1199px){
+    
+   
+    .achive-numbers {
+        display: grid;
+        grid-template-columns: repeat(3,180px);
+        gap: 2rem;
+      }
+    
+
+}
+
